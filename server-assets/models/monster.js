@@ -1,6 +1,16 @@
 let routes = require('express').Router();
 
-let monsters = [];
+let monsters = [
+    {
+"monster":{
+	"name": "Dracula",
+	"age": "15",
+	"description": "blood sucker",
+	"imageurl": "http://www.blastr.com/sites/blastr/files/DraculaLugosi.jpg",
+	"type": "Vampire"
+	}	
+}
+];
 
 function addMonster(monster) {
     monsters.push(monster);
@@ -10,7 +20,7 @@ function removeMonster(index) {
 }
 function editMonster(index, newMonster) {
     if (index < monsters.length) {
-        todos[index] = newMonster
+        monsters[index] = newMonster
         return { message: 'Successfully editted' }
     }
     return { error: 'Out of bounds' }

@@ -1,10 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Monster Reg</title>
+	<meta charset="UTF-8">
+
+	<title>Monster Reg</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+	<h1>Monster Registration</h1>
+	<form>
+		<input type="text" name="name" placeholder="name" />
+		<input type="text" name="age" placeholder="age" />
+		<input type="text" name="description" placeholder="description" />
+		<input type="text" name="photoUrl" placeholder="Image URL" />
+		<select type="text" name="type">
+    <option value="">--Select Type--</option>
+    <option value="vampire">Vampire</option>
+    <option value="zombie">Zombie</option>
+    <option value="witch">Witch</option>
+    <option value="monster">Monster</option>
+  </select>
+		<button type="submit">Add</button>
+	</form>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-lg-6 text-center">
+				<div class="card" id="monster">
+					
+                    <div class="card-block">
+						<h4 class="card-title">Card title</h4>
+						<h6 class="card-subtitle text-muted">Support card subtitle</h6>
+					</div>
+					<img src="http://www.northwestcrossing.com/wp-content/uploads/2015/10/fca4ce85-0b3b-4b59-b288-0ab3d781338a.jpg" width="200" alt="Card image">
+					<div class="card-block">
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<!--<a href="#" class="card-link">Card link</a>
+						<a href="#" class="card-link">Another link</a>-->
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="public/app/monster-service.js"></script>
+    <script src="public/app/monster-controller.js"></script>
 </body>
+
 </html>

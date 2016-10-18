@@ -5,6 +5,7 @@ let monsters = require('./server-assets/models/monster')
 
 server.use(express.static(__dirname + '/public'))
 server.use(bodyParser.json());
+server.use(bodyParser.urlencoded({extended: true}));
 
 server.use(monsters.routes);
 
