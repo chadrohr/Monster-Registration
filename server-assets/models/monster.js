@@ -1,16 +1,6 @@
 let routes = require('express').Router();
 
-let monsters = [
-    {
-"monster":{
-	"name": "Dracula",
-	"age": "15",
-	"description": "blood sucker",
-	"imageurl": "http://www.blastr.com/sites/blastr/files/DraculaLugosi.jpg",
-	"type": "Vampire"
-	}	
-}
-];
+let monsters = [];
 
 function addMonster(monster) {
     monsters.push(monster);

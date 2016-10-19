@@ -1,0 +1,10 @@
+.body{
+    background: url(http://cdn.playbuzz.com/cdn/d798fdec-49db-4b81-94f2-726c0ec5047f/ff59aadb-8384-4f9c-8718-926c852465a4.gif);
+    background-size: cover;
+    color: orange;
+}
+.monster-card{
+    font-family: 'Rock Salt', cursive;
+    color: orange;
+    text-align: center;
+}
