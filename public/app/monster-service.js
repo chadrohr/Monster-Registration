@@ -1,8 +1,8 @@
 function MonsterService(){
     var baseUrl= 'http://localhost:8080/monsters'
-    var query= '/?'
+    var query= '/'
     // var dataStore = this;
-    var myMonsters = [];
+    // var myMonsters = [];
 
 
     this.getMonsters=function(callWhenDone){
@@ -13,6 +13,16 @@ function MonsterService(){
 
     this.addMonster=function(monster, callWhenDone){
         $.post(baseUrl, monster, function(res){
+            callWhenDone(res)
+        })
+    }
+    this.editMonster=function(index, monster, callWhenDone){
+        $.put(baseUrl + query, function(res){
+            callWhenDone(res)
+        })
+    }
+    this.deleteMonster=function(index, callWhenDone){
+        $.delete(baseUrl + query + index, function(res){
             callWhenDone(res)
         })
     }
@@ -34,22 +44,4 @@ function MonsterService(){
     });
   };
 });
-
-    this.editMonster=function(index, monster, callWhenDone){
-        $.put(baseUrl + query, function(res){
-            callWhenDone(res)
-        })
-    }
-
-    
-    this.deleteMonster=function(index, callWhenDone){
-        $.delete(baseUrl + query, index, function(res){
-            callWhenDone(res)
-        })
-    }
-
-
-
-
-
 }

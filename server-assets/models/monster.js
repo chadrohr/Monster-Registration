@@ -32,6 +32,7 @@ function editMonster(index, newMonster) {
         )
     })
     .delete(function (req, res) {
+        console.log(req.params.index)
         removeMonster(req.params.index)
         res.send({ message: 'Successfully removed' })
     })
